@@ -1,0 +1,164 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Chess Project &#8212; TSWE  documentation</title>
+    
+    <link rel="stylesheet" href="_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="My Approach" href="page2.html" />
+    <link rel="prev" title="About Myself" href="home.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>Chess Project</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="home.html">&laquo; About Myself</a> |
+        <a href="#">Chess Project</a>
+        | <a href="page2.html">My Approach &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="table of contents navigation">
+          <h3>Table of Contents</h3>
+          <ul>
+<li><a class="reference internal" href="#">Chess Project</a><ul>
+<li><a class="reference internal" href="#more-about-chess">More about chess</a></li>
+<li><a class="reference internal" href="#chess-moves">Chess Moves</a></li>
+<li><a class="reference internal" href="#pawn-promotion">Pawn Promotion</a></li>
+<li><a class="reference internal" href="#castling">Castling</a></li>
+<li><a class="reference internal" href="#checkmate">Checkmate</a></li>
+<li><a class="reference internal" href="#pgn-notation">PGN notation</a></li>
+<li><a class="reference internal" href="#fen-notation">FEN notation</a></li>
+<li><a class="reference internal" href="#my-approach">My Approach</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        
+  <div class="section" id="chess-project">
+<h1>Chess Project<a class="headerlink" href="#chess-project" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/board.png"><img alt="_images/board.png" src="_images/board.png" style="width: 600px;" /></a>
+<div class="section" id="more-about-chess">
+<h2>More about chess<a class="headerlink" href="#more-about-chess" title="Permalink to this headline">¶</a></h2>
+<p>Chess is one of the most, if not the most popular and well-known among board games all over the world, being considered a strategy and intelligence game, and a good player must already advance what the moves his opponent will make.
+| Chess is played on a board of 64 squares arranged in eight vertical rows called files and eight horizontal rows called ranks. These squares alternate between two colours: white and black. The board is set between the two opponents.</p>
+</div>
+<div class="section" id="chess-moves">
+<h2>Chess Moves<a class="headerlink" href="#chess-moves" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>King can move exactly one square horizontally, vertically, or diagonally. At most once in every game, each king is allowed to make a special move, known as castling.</li>
+<li>Queen can move any number of vacant squares diagonally, horizontally, or vertically.</li>
+<li>Rook can move any number of vacant squares vertically or horizontally. It also is moved while castling.</li>
+<li>Bishop can move any number of vacant squares in any diagonal direction.</li>
+<li>Knight can only move in L. format. This means that you can only walk two houses forward and one to the side at each move.</li>
+<li>Pawns are unusual because they move and capture in different ways: they move forward, but capture diagonally. Pawns can only move forward one square at a time, except for their very first move where they can move forward two squares.</li>
+</ul>
+</div>
+<div class="section" id="pawn-promotion">
+<h2>Pawn Promotion<a class="headerlink" href="#pawn-promotion" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/pawnpro.png"><img alt="_images/pawnpro.png" src="_images/pawnpro.png" style="width: 300px;" /></a>
+<p>If a pawn reaches the opposite side of the board, it is promoted to a higher piece (except king). There is no limit to how many pawns can be promoted.</p>
+</div>
+<div class="section" id="castling">
+<h2>Castling<a class="headerlink" href="#castling" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/castling.png" src="_images/castling.png" />
+<p>Castling is the only move that allows two pieces to move during the same turn. During castling a king moves two spaces towards the rook that it will castle with, and the rook jumps to the other side.</p>
+</div>
+<div class="section" id="checkmate">
+<h2>Checkmate<a class="headerlink" href="#checkmate" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/checkmate.png" src="_images/checkmate.png" />
+<p>Putting an opponent’s king in “checkmate” is the only way to win the game.
+A king is in checkmate if it is in check, the opponent’s piece that has the king in check cannot be captured, the check cannot be blocked, and the king cannot move to a square that is not under attack.</p>
+</div>
+<div class="section" id="pgn-notation">
+<h2>PGN notation<a class="headerlink" href="#pgn-notation" title="Permalink to this headline">¶</a></h2>
+<p>PGN is “Portable Game Notation”, a standard designed for the representation of chess game data using ASCII text files. PGN is structured for easy reading and writing by human users and for easy parsing and generation by computer programs.</p>
+<div class="line-block">
+<div class="line"><strong>Sample</strong></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<div class="line-block">
+<div class="line">[Event “F/S Return Match”]</div>
+<div class="line">[Site “Belgrade, Serbia JUG”]</div>
+<div class="line">[Date “1992.11.04”]</div>
+<div class="line">[Round “29”]</div>
+<div class="line">[White “Fischer, Robert J.”]</div>
+<div class="line">[Black “Spassky, Boris V.”]</div>
+<div class="line">[Result “1/2-1/2”]</div>
+</div>
+<div class="last line-block">
+<div class="line">1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 d6 8. c3</div>
+<div class="line">O-O 9. h3 Nb8 10. d4 Nbd7 11. c4 c6 12. cxb5 axb5 13. Nc3 Bb7 14. Bg5 b4 15.</div>
+<div class="line">Nb1 h6 16. Bh4 c5 17. dxe5 Nxe4 18. Bxe7 Qxe7 19. exd6 Qf6 20. Nbd2 Nxd6 21.</div>
+<div class="line">Nc4 Nxc4 22. Bxc4 Nb6 23. Ne5 Rae8 24. Bxf7+ Rxf7 25. Nxf7 Rxe1+ 26. Qxe1 Kxf7</div>
+<div class="line">27. Qe3 Qg5 28. Qxg5 hxg5 29. b3 Ke6 30. a3 Kd6 31. axb4 cxb4 32. Ra5 Nd5 33.</div>
+<div class="line">f3 Bc8 34. Kf2 Bf5 35. Ra7 g6 36. Ra6+ Kc5 37. Ke1 Nf4 38. g3 Nxh3 39. Kd2 Kb5</div>
+<div class="line">40. Rd6 Kc5 41. Ra6 Nf2 42. g4 Bd3 43. Re6 1/2-1/2</div>
+</div>
+</div>
+</div>
+<div class="section" id="fen-notation">
+<h2>FEN notation<a class="headerlink" href="#fen-notation" title="Permalink to this headline">¶</a></h2>
+<p>FEN is “Forsyth-Edwards Notation”; it is a standard for describing chess
+positions using the ASCII character set.
+A single FEN record uses one text line of variable length composed of six data
+fields.  The first four fields of the FEN specification are the same as the
+first four fields of the EPD specification.
+A text file composed exclusively of FEN data records should have a file name
+with the suffix “.fen”.</p>
+<p>Here is what an FEN string looks like for the initial setup of the board:</p>
+<ul class="simple">
+<li>rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1</li>
+</ul>
+<p>Here is what it looks like if 1. e4 is played:</p>
+<ul class="simple">
+<li>rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1</li>
+</ul>
+<p>And here is what it looks like at the final position in the PGN string I provided above:</p>
+<ul class="simple">
+<li>5k2/ppp5/4P3/3R3p/6P1/1K2Nr2/PP3P2/8 b - - 1 32</li>
+</ul>
+</div>
+<div class="section" id="my-approach">
+<h2>My Approach<a class="headerlink" href="#my-approach" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="page2.html">My Approach</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page2.html#print-board">Print Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page2.html#valid-move">Valid Move</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Ayushi Panth.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>My Approach &#8212; TSWE  documentation</title>
+    
+    <link rel="stylesheet" href="_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Chess Project" href="page1.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>My Approach</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="page1.html">&laquo; Chess Project</a> |
+        <a href="#">My Approach</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="table of contents navigation">
+          <h3>Table of Contents</h3>
+          <ul>
+<li><a class="reference internal" href="#">My Approach</a><ul>
+<li><a class="reference internal" href="#print-board">Print Board</a></li>
+<li><a class="reference internal" href="#valid-move">Valid Move</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        
+  <div class="section" id="my-approach">
+<h1>My Approach<a class="headerlink" href="#my-approach" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="print-board">
+<h2>Print Board<a class="headerlink" href="#print-board" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="valid-move">
+<h2>Valid Move<a class="headerlink" href="#valid-move" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">valid</span><span class="p">(</span><span class="n">piece</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">from</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">to</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+   <span class="n">file1</span> <span class="o">=</span> <span class="n">from</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span>
+   <span class="n">file2</span> <span class="o">=</span> <span class="n">to</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span>
+   <span class="n">rank1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">from</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+   <span class="n">rank2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">to</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+   <span class="n">moved_by</span> <span class="o">=</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">file1</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">file2</span><span class="p">)),</span> <span class="nb">abs</span><span class="p">(</span><span class="n">rank1</span><span class="p">)</span> <span class="o">-</span> <span class="n">rank2</span><span class="p">)</span>
+
+   <span class="k">def</span> <span class="nf">pawn</span><span class="p">():</span>
+      <span class="k">return</span> <span class="n">moved_by</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+
+   <span class="k">def</span> <span class="nf">bishop</span><span class="p">():</span>
+      <span class="k">return</span> <span class="n">moved_by</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">moved_by</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+   <span class="k">def</span> <span class="nf">knight</span><span class="p">():</span>
+      <span class="k">return</span> <span class="n">moved_by</span> <span class="ow">in</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span>
+
+   <span class="k">def</span> <span class="nf">rook</span><span class="p">():</span>
+      <span class="k">return</span> <span class="n">moved_by</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">moved_by</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+
+   <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;R&quot;</span><span class="p">:</span> <span class="n">rook</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">:</span> <span class="n">knight</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="n">bishop</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">:</span> <span class="n">pawn</span><span class="p">}[</span><span class="n">piece</span><span class="p">]()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Ayushi Panth.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>
